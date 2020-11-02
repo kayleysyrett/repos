@@ -1,0 +1,8 @@
+Student student1 = new Student("Kayley", "001");
+Course course1 = new Course("Computing", "G400");
+student1.enrolOnCourse(course1);
+student1.print();
+Kayley, student ID: 001, credits: 0
+Course: Computing G400
+course1.print();
+Course: Computing G400
