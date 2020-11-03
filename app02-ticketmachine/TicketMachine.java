@@ -9,20 +9,25 @@
  * @author David J. Barnes and Michael Kölling
  * @version 2016.02.29
  * 
- * Modified by Student Name
+ * Modified by Kayley Syrett
  */
 public class TicketMachine
 {
     // The amount of money entered by a customer so far.
     private int balance;
+    
     // The total amount of money collected by this machine.
     private int total;
     
+    // The price of a ticket from this machine
+    public static final Ticket aylesburyTicket = new Ticket("Aylesbury", 220);
+    public static final Ticket amershamTicket = new Ticket("Amersham", 300);
+    public static final Ticket highWycombeTicket = new Ticket("High Wycombe", 330);
+
     private Coin coin;
     
-    private Ticket aylesburyTicket;
-    private Ticket amershamTicket;
-    private Ticket hwycombeTicket;
+    private Ticket userTicket = null;
+    
     /**
      * Create a machine that issues tickets of the given price.
      */
@@ -31,9 +36,7 @@ public class TicketMachine
         balance = 0;
         total = 0;
         
-        aylesburyTicket = new Ticket("Aylesbury",220);
-        amershamTicket = new Ticket("Amersham",300);
-        hwycombeTicket = new Ticket("High Wycombe",330);
+        userTicket = null;
     }
 
 
@@ -41,9 +44,9 @@ public class TicketMachine
      * Return The amount of money already inserted for the
      * next ticket.
      */
-    public int getBalance()
+    public void printBalance()
     {
-        return balance;
+       System.out.println("your balance is " + balance);
     }
 
     /**
@@ -63,12 +66,20 @@ public class TicketMachine
         }
     }
     
-        /**
-     * 
-     */
+    public void insertCoin(Coin coin)
+    {
+        balance = balance + coin.getValue();
+        printBalance();
+    }
+    
+    /**
+    * 
+    */
     public void insert10p()
     {
         balance = balance + 10;
+        System.out.println("you have inserted 10p");
+        printBalance();
     }
     
     /**
@@ -77,22 +88,28 @@ public class TicketMachine
     public void insert20p()
     {
         balance = balance + 20;
+        System.out.println("you have inserted 20p");
+        printBalance();
     }
     
-        /**
-     * 
-     */
+    /**
+    * 
+    */
     public void insert100p()
     {
         balance = balance + 100;
+        System.out.println("you have inserted 100p");
+        printBalance();
     }
     
-        /**
-     * 
-     */
+    /**
+    * 
+    */
     public void insert200p()
     {
         balance = balance + 200;
+        System.out.println("you have inserted 200p");
+        printBalance();
     }
     
     /**
@@ -103,25 +120,17 @@ public class TicketMachine
     public void printTicket()
     {
         
-        if(balance >= price) 
+        int price = userTicket.getPrice();
+        if (balance >= price)
         {
-            // Simulate the printing of a ticket.
-            System.out.println("##################");
-            System.out.println("# The BlueJ Line");
-            System.out.println("# Ticket");
-            System.out.println("# " + price + " cents.");
-            System.out.println("##################");
-            System.out.println();
-
-            // Update the total collected with the price.
             total = total + price;
-            // Reduce the balance by the price.
             balance = balance - price;
+            userTicket.print();
         }
         else 
         {
             System.out.println("You must insert at least: " +
-                               (price - balance) + " more cents.");
+                               (price - balance) + " more pence.");
                     
         }
     }
@@ -137,4 +146,28 @@ public class TicketMachine
         balance = 0;
         return amountToRefund;
     }
+    
+    public void selectAmersham()
+    {
+        userTicket = amershamTicket;
+    }
+    
+        public void selectAylesbury()
+    {
+        userTicket = aylesburyTicket;
+    }
+    
+        public void selectHighwycombe()
+    {
+        userTicket = highWycombeTicket;
+    }
+    
+    public void printTickets()
+    {
+        System.out.println("The following tickets are available");
+        amershamTicket.print();
+        aylesburyTicket.print();
+        highWycombeTicket.print();
+    }
+    
 }

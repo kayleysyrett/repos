@@ -37,6 +37,10 @@ public class Ticket
         System.out.println("Issued " + dateTime);
     }
     
+    public int getPrice()
+    {
+        return price;
+    }
     
 
 }
