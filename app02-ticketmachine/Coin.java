@@ -2,8 +2,8 @@
 /**
  * Enumeration class Coin - write a description of the enum class here
  *
- * @author (your name here)
- * @version (version number or date here)
+ * @author Kayley Syrett
+ * @version 01 3/11/20
  */
 public enum Coin
 {
