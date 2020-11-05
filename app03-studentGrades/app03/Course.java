@@ -67,7 +67,7 @@ public class Course
             return Grades.F;
         }
 
-        return Grade.X;
+        return Grades.X;
 
     }
 }

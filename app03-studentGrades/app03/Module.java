@@ -54,5 +54,62 @@ public class Module
               " " + title + " Mark = " + mark);
     }
     
+    /**
+     * This will get the title of the module
+     */
+    public String getTitle()
+    {
+        return this.title;
+    }
+    
+    /**
+     * This will change the title of the module
+     */
+    public void setTitle (String title)
+    {
+        this.title = title;
+    }
+    
+    /**
+     * This will get the module code
+     */
+    public String getCodeNo()
+    {
+        return this.codeNo;
+    }
+    
+    /**
+     * This will change the codeNo
+     */
+    public void setCodeno(String codeNo)
+    {
+        this.codeNo = codeNo;
+    }
+    
+    /**
+     * This will get the students mark
+     */
+    public int getMark()
+    {
+        return this.mark;
+    }
+    
+    /**
+     * This will change the students mark
+     */
+    public void setMark(int mark)
+    {
+        this.mark = mark;
+    }
+    
+    /**
+     * This will show when a student has completed a module
+     */
+    public boolean isComplete()
+    {
+        return this.completed;
+    }
+    
+    
  
 }
