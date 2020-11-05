@@ -11,6 +11,8 @@
  */
 public class Course
 {
+    public static final int MINIMUM_PASS = 40;
+    
     private String title;
 
     private String codeNo;
@@ -46,9 +48,19 @@ public class Course
         if(moduleNo == 1)
         {
             module1.awardMark(mark);
-            
         }
-
+        else if(moduleNo == 2)
+        {
+            module2.awardMark(mark);
+        }
+        else if(moduleNo == 3)
+        {
+            module3.awardMark(mark);
+        }
+        else if(moduleNo == 4)
+        {
+            module4.awardMark(mark);
+        }
     }
 
     /**
@@ -65,11 +77,23 @@ public class Course
 
     public Grades convertToGrade(int mark)
     {
-        if((mark>= 0) && (mark < 40))
+        if((mark>= 0) && (mark < MINIMUM_PASS))
         {
             return Grades.F;
         }
-
+        else if((mark >= 40) && (mark < 50))
+        {
+            return Grades.D;
+        }
+        else if((mark>= 0) && (mark < 40))
+        {
+            return Grades.C;
+        }
+        else if((mark>= 0) && (mark < 40))
+        {
+            return Grades.B;
+        }
+        
         return Grades.X;
 
     }
