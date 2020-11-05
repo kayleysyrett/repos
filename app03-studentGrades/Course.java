@@ -69,13 +69,17 @@ public class Course
     public void print()
     {
         System.out.println("Course: " + title + " " + codeNo);
+        
         module1.print();
         module2.print();
         module3.print();
         module4.print();
+        
+        System.out.println(" Final Mark = " + finalMark + "%");
+        System.out.println(" Final Grade = " + finalGrade);
     }
 
-    public Grades convertToGrade(int mark)
+    private Grades convertToGrade(int mark)
     {
         if((mark>= 0) && (mark < MINIMUM_PASS))
         {
@@ -85,16 +89,37 @@ public class Course
         {
             return Grades.D;
         }
-        else if((mark>= 0) && (mark < 40))
+        else if((mark>= 50) && (mark < 60))
         {
             return Grades.C;
         }
-        else if((mark>= 0) && (mark < 40))
+        else if((mark>= 60) && (mark < 70))
         {
             return Grades.B;
+        }
+        else if((mark>= 70) && (mark <= 100))
+        {
+            return Grades.A;
         }
         
         return Grades.X;
 
     }
+    
+    public void calculateMark()
+    {
+        if(module1.isComplete() & module2.isComplete() & 
+           module3.isComplete() & module4.isComplete())
+        {
+           finalMark = module1.getMark() + module2.getMark() + 
+                       module3.getMark() + module4.getMark();
+           finalMark = finalMark / 4;
+           finalGrade = convertToGrade(finalMark);
+        }
+        else 
+        {
+            System.out.println("The course is not complete");
+        }
+    }
+    
 }
