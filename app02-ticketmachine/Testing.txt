@@ -1,0 +1,64 @@
+TicketMachine ticketMa1 = new TicketMachine();
+ticketMa1.selectAylesbury();
+ticketMa1.insert200p();
+you have inserted 200p
+your balance is 200
+ticketMa1.insert20p();
+you have inserted 20p
+your balance is 220
+ticketMa1.printTicket();
+Ticket To Aylesbury
+Price 220p 
+Issued Wed Nov 18 11:18:56 GMT 2020
+ticketMa1.selectAylesbury();
+ticketMa1.insert200p();
+you have inserted 200p
+your balance is 200
+ticketMa1.insert100p();
+you have inserted 100p
+your balance is 300
+ticketMa1.printTicket();
+Ticket To Aylesbury
+Price 220p 
+Issued Wed Nov 18 11:18:56 GMT 2020
+ticketMa1.refundBalance()
+    returned int 80
+ticketMa1.selectAmersham();
+ticketMa1.insert200p();
+you have inserted 200p
+your balance is 200
+ticketMa1.insert100p();
+you have inserted 100p
+your balance is 300
+ticketMa1.printTicket();
+Ticket To Amersham
+Price 300p 
+Issued Wed Nov 18 11:18:56 GMT 2020
+ticketMa1.selectAmersham();
+ticketMa1.insert200p();
+you have inserted 200p
+your balance is 200
+ticketMa1.insert10p();
+you have inserted 10p
+your balance is 210
+ticketMa1.printTicket();
+You must insert at least: 90 more pence.
+ticketMa1.selectHighwycombe();
+ticketMa1.insert200p();
+you have inserted 200p
+your balance is 410
+ticketMa1.insert100p();
+you have inserted 100p
+your balance is 510
+ticketMa1.insert20p();
+you have inserted 20p
+your balance is 530
+ticketMa1.insert10p();
+you have inserted 10p
+your balance is 540
+ticketMa1.printTicket();
+Ticket To High Wycombe
+Price 330p 
+Issued Wed Nov 18 11:18:56 GMT 2020
+ticketMa1.printBalance();
+your balance is 210
