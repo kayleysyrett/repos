@@ -1,0 +1,36 @@
+TicketMachine ticketMa1 = new TicketMachine();
+ticketMa1.selectAmersham();
+ticketMa1.selectAylesbury();
+ticketMa1.selectHighwycombe();
+ticketMa1.insert200p();
+you have inserted 200p
+your balance is 200
+ticketMa1.insert200p();
+you have inserted 200p
+your balance is 400
+ticketMa1.insert200p();
+you have inserted 200p
+your balance is 600
+ticketMa1.insert200p();
+you have inserted 200p
+your balance is 800
+ticketMa1.insert20p();
+you have inserted 20p
+your balance is 820
+ticketMa1.insert20p();
+you have inserted 20p
+your balance is 840
+ticketMa1.insert10p();
+you have inserted 10p
+your balance is 850
+ticketMa1.printTickets();
+The following tickets are available
+Ticket To Amersham
+Price 300p 
+Issued Wed Nov 18 13:17:02 GMT 2020
+Ticket To Aylesbury
+Price 220p 
+Issued Wed Nov 18 13:17:02 GMT 2020
+Ticket To High Wycombe
+Price 330p 
+Issued Wed Nov 18 13:17:02 GMT 2020
