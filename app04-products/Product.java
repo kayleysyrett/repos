@@ -1,8 +1,9 @@
 /**
- * Model some details of a product sold by a company.
+ * Product details of books sold by a bookstore.
  * 
  * @author David J. Barnes and Michael Kölling.
  * @version 2016.02.29
+ * @modified by Kayley Syrett
  */
 public class Product
 {

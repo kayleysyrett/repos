@@ -5,6 +5,7 @@
  * 
  * @author David J. Barnes and Michael Kölling.
  * @version 2016.02.29
+ * @modified by Kayley Syrett 
  */
 public class StockDemo
 {
@@ -19,9 +20,16 @@ public class StockDemo
     {
         this.manager = manager;
         
-        manager.addProduct(new Product(101, "Samsung Galaxy S20"));
-        manager.addProduct(new Product(102, "Apple iPhone 12"));
-        manager.addProduct(new Product(103, "Google Pixel 4A"));
+        manager.addProduct(new Product(101, "Meg & Mog Comes To School"));
+        manager.addProduct(new Product(102, "Meg & Mog At Sea"));
+        manager.addProduct(new Product(103, "Meg & Mog On The Moon"));
+        manager.addProduct(new Product(104, "Meg & Mog Goes To Bed"));
+        manager.addProduct(new Product(105, "Meg & Mog Megs Veg"));
+        manager.addProduct(new Product(106, "Meg & Mog And The Pirate"));
+        manager.addProduct(new Product(107, "Meg & Mog And The Dragon"));
+        manager.addProduct(new Product(108, "Meg & Mog Up The Creek"));
+        manager.addProduct(new Product(109, "Meg & Mog Mog's Missing"));
+        manager.addProduct(new Product(110, "Meg & Mog At The Zoo"));
     }
     
     /**

@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 
 /**
- * Manage the stock in a business.
+ * Manage the stock in a book store.
  * The stock is described by zero or more Products.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Kayley Syrett 
+ * @version01 23/11/2020
  */
 public class StockManager
 {
@@ -37,10 +37,24 @@ public class StockManager
      */
     public void delivery(int id, int amount)
     {
+        
     }
     
+    /**
+     * Try to find a product in the stock with the given id.
+     * @return the identified product, or null if there is none
+     *         with a matching id.
+     */
     public Product findProduct(int id)
     {
+        for(Product product : stock)
+        {
+            if(product.getID() == id)
+            {
+                return product;
+            }
+        }
+        
         return null;
     }
     
@@ -96,7 +110,7 @@ public class StockManager
     public void printAllProducts()
     {
         System.out.println();
-        System.out.println("Peacock's Stock List");
+        System.out.println("Meg & Mog Books Stock List");
         System.out.println("====================");
         System.out.println();
         
