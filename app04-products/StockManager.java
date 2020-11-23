@@ -35,7 +35,7 @@ public class StockManager
      * @param id The ID of the product.
      * @param amount The amount to increase the quantity by.
      */
-    public void delivery(int id, int amount)
+    public void deliverProduct(int id, int amount)
     {
         Product product = findProduct(id);
         if(product != null)
@@ -73,24 +73,31 @@ public class StockManager
      * Show the before and after status of the product.
      * @param id The ID of the product being sold.
      */
-    public void sellProduct(int id)
+    public void sellProduct(int id, int quantity)
     {
         Product product = findProduct(id);
 
         if(product != null) 
         {
-            printDetails(id);
-            product.sellOne();
-            printDetails(id);
+            if(quantity > product.getQuantity())
+                quantity = product.getQuantity();
+            
+            printProduct(id);
+            for(int count = 0; count <=quantity; count++)
+            {
+                product.sellOne();
+            }
+            
+            printProduct(id);
         }
     }    
 
     /**
-     * show details of the given product. If found,
+     * Print details of the given product. If found,
      * its name and stock quantity will be shown.
      * @param id The ID of the product to look for.
      */
-    public void printDetails(int id)
+    public void printProduct(int id)
     {
         Product product = findProduct(id);
 
@@ -117,7 +124,7 @@ public class StockManager
      * its name and stock quantity will be shown.
      * @param id The ID of the product to look for.
      */
-    public void printProduct(int id)
+    public void printDetails(int id)
     {
         Product product = findProduct(id);
 
@@ -128,7 +135,8 @@ public class StockManager
     }
 
     /**
-     * Print out all of the products
+     * Print each product in the stock
+     * in order they are in the stock list
      */
     public void printAllProducts()
     {

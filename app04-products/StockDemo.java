@@ -39,16 +39,24 @@ public class StockDemo
     {
         manager.printAllProducts();
         demoDeliverProducts();
+        manager.printAllProducts();
+        manager.printAllProducts();
     }
     
     /**
      * This demonstration shows how the StockManager
-     * might be used. Details of the products are shown, the
-     * products are restocked, and then the details are shown again.
+     * might be used. Details of one product is shown, the
+     * product is restocked, and then the details are shown again.
      */
     private void demoDeliverProducts()
     {
-       
+        int quantity = 0;
+        
+        for(int id = 101; id <= 110; id++)
+        {
+            manager.deliverProduct(id, quantity);
+        }
+    }
+
     }
     
-}
