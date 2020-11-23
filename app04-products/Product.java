@@ -74,7 +74,7 @@ public class Product
         else 
         {
             System.out.println("Attempt to restock " + name +
-                               " with a non-positive amount: " + amount);
+                " with a non-positive amount: " + amount);
         }
     }
 
@@ -94,7 +94,7 @@ public class Product
                 "Attempt to sell an out of stock item: " + name);
         }
     }
-    
+
     /**
      * set product name
      */

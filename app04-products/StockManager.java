@@ -81,13 +81,13 @@ public class StockManager
         {
             if(quantity > product.getQuantity())
                 quantity = product.getQuantity();
-            
+
             printProduct(id);
             for(int count = 0; count <=quantity; count++)
             {
                 product.sellOne();
             }
-            
+
             printProduct(id);
         }
     }    
