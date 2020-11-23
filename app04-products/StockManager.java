@@ -38,7 +38,16 @@ public class StockManager
     public void delivery(int id, int amount)
     {
         Product product = findProduct(id);
-        product.increaseQuantity(amount);
+        if(product != null)
+        {
+           product.increaseQuantity(amount);
+           System.out.println("Product Delivered : " + product);  
+        }
+        else
+        {
+            System.out.println("Product ID " + id + " NOT FOUND!");
+        }
+
     }
 
     /**
@@ -88,14 +97,7 @@ public class StockManager
         return 0;
     }
 
-    /**
-     * print details of all the products
-     */
-    public void printProductDetails()
-    {
-    }
-
-     /**
+      /**
      * Print details of the given product. If found,
      * its name and stock quantity will be shown.
      * @param id The ID of the product to look for.
@@ -111,8 +113,7 @@ public class StockManager
     }
 
     /**
-     * Print out each product in the stock
-     * in the order they are in the stock list
+     * Print out all of the products
      */
     public void printAllProducts()
     {
