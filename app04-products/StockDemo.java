@@ -37,16 +37,25 @@ public class StockDemo
      * might be used. Details of one product are shown, the
      * product is restocked, and then the details are shown again.
      */
-    public void demoDeliverProduct()
+    public void demoDelivery()
     {
         // Show details of all of the products before delivery.
-        manager.printProduct(101);
+        manager.printAllProducts();
         
         // Take delivery of 5 items of one of the products.
-        manager.delivery(101, 5);
+        manager.delivery(101, 50);
+        manager.delivery(102, 20);
+        manager.delivery(103, 70);
+        manager.delivery(104, 80);
+        manager.delivery(105, 100);
+        manager.delivery(106, 90);
+        manager.delivery(107, 100);
+        manager.delivery(108, 50);
+        manager.delivery(109, 50);
+        manager.delivery(110, 45);
         
         // Show the list of all products after delivery
-        manager.printProduct(101);
+        manager.printAllProducts();
     }
     
 
