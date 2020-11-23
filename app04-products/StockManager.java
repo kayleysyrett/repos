@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
 /**
- * Manage the stock in a book store.
- * The stock is described by zero or more Products.
+ * Manage the stock in a makeup store.
+ * The stock is described by zero or more products.
  * 
  * @author Kayley Syrett 
  * @version01 23/11/2020
@@ -40,8 +40,8 @@ public class StockManager
         Product product = findProduct(id);
         if(product != null)
         {
-           product.increaseQuantity(amount);
-           System.out.println("Product Delivered : " + product);  
+            product.increaseQuantity(amount);
+            System.out.println("Product Delivered : " + product);  
         }
         else
         {
@@ -84,7 +84,7 @@ public class StockManager
             printDetails(id);
         }
     }    
-    
+
     /**
      * show details of the given product. If found,
      * its name and stock quantity will be shown.
@@ -93,11 +93,11 @@ public class StockManager
     public void printDetails(int id)
     {
         Product product = findProduct(id);
-        
+
         if(product != null)
         {
-        System.out.println(product.toString());
-    }
+            System.out.println(product.toString());
+        }
     }
 
     /**
@@ -112,7 +112,7 @@ public class StockManager
         return 0;
     }
 
-      /**
+    /**
      * Print details of the given product. If found,
      * its name and stock quantity will be shown.
      * @param id The ID of the product to look for.
@@ -133,7 +133,7 @@ public class StockManager
     public void printAllProducts()
     {
         System.out.println();
-        System.out.println("Meg & Mog Books Stock List");
+        System.out.println("Lipstick Stock List");
         System.out.println("====================");
         System.out.println();
 

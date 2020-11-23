@@ -1,5 +1,5 @@
 /**
- * Product details of books sold by a bookstore.
+ * Product details of lipsticks sold by a makeup shop.
  * 
  * @author David J. Barnes and Michael Kölling.
  * @version 2016.02.29
