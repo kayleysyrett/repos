@@ -1,0 +1,120 @@
+StockManager manager = new StockManager();
+StockDemo stockDem2 = new StockDemo(manager);
+stockDem2.runDemo();
+
+Lipstick Stock List
+====================
+
+101: Rimmel Lipstick Red stock level: 0
+102: Rimmel Lipstick Pale Pink stock level: 0
+103: MAC Lipstick Fuschia stock level: 0
+104: MAC Lipstick Nude stock level: 0
+105: Loreal Lipstick Peach stock level: 0
+106: Loreal Lipstick Rose Pink stock level: 0
+107: Max Factor Lipstick Plum stock level: 0
+108: Max Factor Lipstick Coral stock level: 0
+109: Maybelline Lipstick Caramel stock level: 0
+110: Maybelline Lipstick Burgandy stock level: 0
+
+Product Delivered : 101: Rimmel Lipstick Red stock level: 1
+Product Delivered : 102: Rimmel Lipstick Pale Pink stock level: 2
+Product Delivered : 103: MAC Lipstick Fuschia stock level: 3
+Product Delivered : 104: MAC Lipstick Nude stock level: 4
+Product Delivered : 105: Loreal Lipstick Peach stock level: 5
+Product Delivered : 106: Loreal Lipstick Rose Pink stock level: 6
+Product Delivered : 107: Max Factor Lipstick Plum stock level: 7
+Product Delivered : 108: Max Factor Lipstick Coral stock level: 8
+Product Delivered : 109: Maybelline Lipstick Caramel stock level: 9
+Product Delivered : 110: Maybelline Lipstick Burgandy stock level: 10
+
+Lipstick Stock List
+====================
+
+101: Rimmel Lipstick Red stock level: 1
+102: Rimmel Lipstick Pale Pink stock level: 2
+103: MAC Lipstick Fuschia stock level: 3
+104: MAC Lipstick Nude stock level: 4
+105: Loreal Lipstick Peach stock level: 5
+106: Loreal Lipstick Rose Pink stock level: 6
+107: Max Factor Lipstick Plum stock level: 7
+108: Max Factor Lipstick Coral stock level: 8
+109: Maybelline Lipstick Caramel stock level: 9
+110: Maybelline Lipstick Burgandy stock level: 10
+
+101: Rimmel Lipstick Red stock level: 1
+Attempt to sell an out of stock item: Rimmel Lipstick Red
+101: Rimmel Lipstick Red stock level: 0
+102: Rimmel Lipstick Pale Pink stock level: 2
+Attempt to sell an out of stock item: Rimmel Lipstick Pale Pink
+102: Rimmel Lipstick Pale Pink stock level: 0
+103: MAC Lipstick Fuschia stock level: 3
+Attempt to sell an out of stock item: MAC Lipstick Fuschia
+103: MAC Lipstick Fuschia stock level: 0
+104: MAC Lipstick Nude stock level: 4
+Attempt to sell an out of stock item: MAC Lipstick Nude
+104: MAC Lipstick Nude stock level: 0
+105: Loreal Lipstick Peach stock level: 5
+Attempt to sell an out of stock item: Loreal Lipstick Peach
+105: Loreal Lipstick Peach stock level: 0
+106: Loreal Lipstick Rose Pink stock level: 6
+Attempt to sell an out of stock item: Loreal Lipstick Rose Pink
+106: Loreal Lipstick Rose Pink stock level: 0
+107: Max Factor Lipstick Plum stock level: 7
+Attempt to sell an out of stock item: Max Factor Lipstick Plum
+107: Max Factor Lipstick Plum stock level: 0
+108: Max Factor Lipstick Coral stock level: 8
+Attempt to sell an out of stock item: Max Factor Lipstick Coral
+108: Max Factor Lipstick Coral stock level: 0
+109: Maybelline Lipstick Caramel stock level: 9
+Attempt to sell an out of stock item: Maybelline Lipstick Caramel
+109: Maybelline Lipstick Caramel stock level: 0
+110: Maybelline Lipstick Burgandy stock level: 10
+Attempt to sell an out of stock item: Maybelline Lipstick Burgandy
+110: Maybelline Lipstick Burgandy stock level: 0
+
+Lipstick Stock List
+====================
+
+101: Rimmel Lipstick Red stock level: 0
+102: Rimmel Lipstick Pale Pink stock level: 0
+103: MAC Lipstick Fuschia stock level: 0
+104: MAC Lipstick Nude stock level: 0
+105: Loreal Lipstick Peach stock level: 0
+106: Loreal Lipstick Rose Pink stock level: 0
+107: Max Factor Lipstick Plum stock level: 0
+108: Max Factor Lipstick Coral stock level: 0
+109: Maybelline Lipstick Caramel stock level: 0
+110: Maybelline Lipstick Burgandy stock level: 0
+
+manager.deliverProduct(101, 50);
+Product Delivered : 101: Rimmel Lipstick Red stock level: 50
+manager.printAllProducts();
+
+Lipstick Stock List
+====================
+
+101: Rimmel Lipstick Red stock level: 50
+102: Rimmel Lipstick Pale Pink stock level: 0
+103: MAC Lipstick Fuschia stock level: 0
+104: MAC Lipstick Nude stock level: 0
+105: Loreal Lipstick Peach stock level: 0
+106: Loreal Lipstick Rose Pink stock level: 0
+107: Max Factor Lipstick Plum stock level: 0
+108: Max Factor Lipstick Coral stock level: 0
+109: Maybelline Lipstick Caramel stock level: 0
+110: Maybelline Lipstick Burgandy stock level: 0
+
+manager.findProduct(101)
+    returned Object <object reference>
+manager.numberInStock(101)
+    returned int 0
+manager.printDetails(101);
+101: Rimmel Lipstick Red stock level: 50
+manager.printProduct(101);
+101: Rimmel Lipstick Red stock level: 50
+manager.sellProduct(101, 5);
+101: Rimmel Lipstick Red stock level: 50
+101: Rimmel Lipstick Red stock level: 44
+manager.sellProduct(101, 1);
+101: Rimmel Lipstick Red stock level: 44
+101: Rimmel Lipstick Red stock level: 42
