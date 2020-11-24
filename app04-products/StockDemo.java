@@ -46,6 +46,9 @@ public class StockDemo
         manager.printAllProducts();
         demoDeliverProducts();
         demoSellProducts();
+        manager.removeProduct(101);
+        manager.renameProduct(102,"Rimmel Lipstick Blue");
+        manager.printAllProducts();
     }
 
     /**

@@ -38,6 +38,7 @@ public class StockManager
     public void deliverProduct(int id, int amount)
     {
         Product product = findProduct(id);
+        
         if(product != null)
         {
             product.increaseQuantity(amount);
@@ -81,14 +82,11 @@ public class StockManager
         {
             if(amount > product.getQuantity())
                 amount = product.getQuantity();
-
-            printProduct(id);
-            for(int count = 0; count <=amount; count++)
-            {
-                product.sell(amount);
-            }
-
-            printProduct(id);
+            product.sell(amount);
+        }
+        else
+        {
+            System.out.println("Product ID " + id + " NOT FOUND!");
         }
     }    
 
@@ -105,6 +103,10 @@ public class StockManager
         {
             System.out.println(product.toString());
         }
+        else
+        {
+            System.out.println("Product ID " + id + " NOT FOUND!");
+        }
     }
 
     /**
@@ -116,6 +118,15 @@ public class StockManager
      */
     public int numberInStock(int id)
     {
+        Product product = findProduct(id);
+        if(product != null)
+        {
+            System.out.println("Number in stock = " + product.getQuantity());
+        }
+        else
+        {
+            System.out.println("Product ID " + id + " NOT FOUND!");
+        }
         return 0;
     }
 
@@ -158,5 +169,47 @@ public class StockManager
         System.out.println("Kayley's Stock List");
         System.out.println("======================\n");
         System.out.println();
+    }
+    
+    /**
+     * 
+     * 
+     * 
+     */
+    public void removeProduct(int id)
+    {
+        Product product = findProduct(id);
+        
+        if(product != null)
+        {
+            stock.remove(product);
+            System.out.println("Product Removed : " + product);  
+        }
+        else
+        {
+            System.out.println("Product ID " + id + " NOT FOUND!");
+        }
+
+    }
+    
+        /**
+     * 
+     * 
+     * 
+     */
+    public void renameProduct(int id, String newName)
+    {
+        Product product = findProduct(id);
+        
+        if(product != null)
+        {
+            product.changeName(newName);
+            System.out.println("Product Renamed : " + product);  
+        }
+        else
+        {
+            System.out.println("Product ID " + id + " NOT FOUND!");
+        }
+
     }
 }
