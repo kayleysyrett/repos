@@ -69,23 +69,23 @@ public class StockManager
     }
 
     /**
-     * Sell one of the given item.
+     * Sell an amount of the given item.
      * Show the before and after status of the product.
      * @param id The ID of the product being sold.
      */
-    public void sellProduct(int id, int quantity)
+    public void sellProduct(int id, int amount)
     {
         Product product = findProduct(id);
 
         if(product != null) 
         {
-            if(quantity > product.getQuantity())
-                quantity = product.getQuantity();
+            if(amount > product.getQuantity())
+                amount = product.getQuantity();
 
             printProduct(id);
-            for(int count = 0; count <=quantity; count++)
+            for(int count = 0; count <=amount; count++)
             {
-                product.sellOne();
+                product.sell(amount);
             }
 
             printProduct(id);
