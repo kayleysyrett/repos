@@ -135,21 +135,28 @@ public class StockManager
     }
 
     /**
-     * Print each product in the stock
+     * Print details of all the products.
      * in order they are in the stock list
      */
     public void printAllProducts()
     {
-        System.out.println();
-        System.out.println("Lipstick Stock List");
-        System.out.println("====================");
-        System.out.println();
-
+        printHeading();
+        
         for(Product product : stock)
         {
             System.out.println(product);
         }
-
+    }
+    
+    /**
+     * This method will print a heading at the 
+     * top of the stock list
+     */
+    public void printHeading()
+    {
+        System.out.println("\n======================");
+        System.out.println("Kayley's Stock List");
+        System.out.println("======================\n");
         System.out.println();
     }
 }

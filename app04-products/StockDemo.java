@@ -11,12 +11,18 @@ public class StockDemo
 {
     // The stock manager.
     private StockManager manager;
+    
+    private String name = "Rimmel Lipstick";
 
     /**
      * This StockManager shows some sample products
      */
     public StockDemo(StockManager manager)
     {
+        if(name.startsWith("Rimmel Lipstick"))
+        {
+            
+        }
         this.manager = manager;
 
         manager.addProduct(new Product(101, "Rimmel Lipstick Red"));
@@ -39,9 +45,7 @@ public class StockDemo
     {
         manager.printAllProducts();
         demoDeliverProducts();
-        manager.printAllProducts();
         demoSellProducts();
-        manager.printAllProducts();
     }
 
     /**
@@ -51,6 +55,8 @@ public class StockDemo
      */
     private void demoDeliverProducts()
     {
+        printHeading("Delivery");
+        
         int quantity = 0;
 
         for(int id = 101; id <= 110; id++)
@@ -67,6 +73,8 @@ public class StockDemo
      */
     private void demoSellProducts()
     {
+        printHeading("Sell");
+        
         int quantity = 0;
 
         for(int id = 101; id <= 110; id++)
@@ -74,6 +82,16 @@ public class StockDemo
             quantity++;
             manager.sellProduct(id, quantity);
         }
+    }
+    
+    /**
+     *This method will print a heading for each demo
+     */
+    private void printHeading(String verb)
+    {
+        System.out.println();
+        System.out.println("Demonstrating Product " + verb);
+        System.out.println();
     }
 
 }
