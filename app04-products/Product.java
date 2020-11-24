@@ -102,4 +102,12 @@ public class Product
     {
         this.name = name;
     }
+    
+    /**
+     * Set a new name for this product
+     */
+    public void changeName(String replacementName)
+    {
+        name = replacementName;
+    }
 }
