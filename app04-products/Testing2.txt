@@ -1,0 +1,62 @@
+StockManager manager = new StockManager();
+StockDemo stockDem1 = new StockDemo(manager);
+stockDem1.runDemo();
+
+======================
+Kayley's Stock List
+======================
+
+
+101: Rimmel Lipstick Red stock level: 0
+102: Rimmel Lipstick Pale Pink stock level: 0
+103: MAC Lipstick Fuschia stock level: 0
+104: MAC Lipstick Nude stock level: 0
+105: Loreal Lipstick Peach stock level: 0
+106: Loreal Lipstick Rose Pink stock level: 0
+107: Max Factor Lipstick Plum stock level: 0
+108: Max Factor Lipstick Coral stock level: 0
+109: Maybelline Lipstick Caramel stock level: 0
+110: Maybelline Lipstick Burgandy stock level: 0
+
+Demonstrating Product Delivery
+
+Product Delivered : 101: Rimmel Lipstick Red stock level: 1
+Product Delivered : 102: Rimmel Lipstick Pale Pink stock level: 2
+Product Delivered : 103: MAC Lipstick Fuschia stock level: 3
+Product Delivered : 104: MAC Lipstick Nude stock level: 4
+Product Delivered : 105: Loreal Lipstick Peach stock level: 5
+Product Delivered : 106: Loreal Lipstick Rose Pink stock level: 6
+Product Delivered : 107: Max Factor Lipstick Plum stock level: 7
+Product Delivered : 108: Max Factor Lipstick Coral stock level: 8
+Product Delivered : 109: Maybelline Lipstick Caramel stock level: 9
+Product Delivered : 110: Maybelline Lipstick Burgandy stock level: 10
+
+Demonstrating Product Sell
+
+Sold 1 of Rimmel Lipstick Red
+Sold 2 of Rimmel Lipstick Pale Pink
+Sold 3 of MAC Lipstick Fuschia
+Sold 4 of MAC Lipstick Nude
+Sold 5 of Loreal Lipstick Peach
+Sold 6 of Loreal Lipstick Rose Pink
+Sold 7 of Max Factor Lipstick Plum
+Sold 8 of Max Factor Lipstick Coral
+Sold 9 of Maybelline Lipstick Caramel
+Sold 10 of Maybelline Lipstick Burgandy
+Product Removed : 101: Rimmel Lipstick Red stock level: 0
+Product Renamed : 102: Rimmel Lipstick Blue stock level: 0
+
+======================
+Kayley's Stock List
+======================
+
+
+102: Rimmel Lipstick Blue stock level: 0
+103: MAC Lipstick Fuschia stock level: 0
+104: MAC Lipstick Nude stock level: 0
+105: Loreal Lipstick Peach stock level: 0
+106: Loreal Lipstick Rose Pink stock level: 0
+107: Max Factor Lipstick Plum stock level: 0
+108: Max Factor Lipstick Coral stock level: 0
+109: Maybelline Lipstick Caramel stock level: 0
+110: Maybelline Lipstick Burgandy stock level: 0
