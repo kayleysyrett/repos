@@ -41,6 +41,8 @@ public class StockApp
 
             String choice = input.getInput();
             choice = choice.toLowerCase();
+            
+            executeMenuChoice(choice);
 
             if(choice.equals("quit"))
                 finished = true;
@@ -56,7 +58,7 @@ public class StockApp
         {
           addProduct();
         }
-        else if(choice.equals("printAll"))
+        else if(choice.equals("printall"))
         {
           printAllProducts();
         }

@@ -38,7 +38,7 @@ public class StockManager
     public void deliverProduct(int id, int amount)
     {
         Product product = findProduct(id);
-        
+
         if(product != null)
         {
             product.increaseQuantity(amount);
@@ -153,12 +153,19 @@ public class StockManager
     {
         printHeading();
         
-        for(Product product : stock)
+        if(stock.size() == 0)
         {
-            System.out.println(product);
+            System.out.println("Currently you have no stock!");
+        }
+        else
+        {
+            for(Product product : stock)
+            {
+                System.out.println(product);
+            } 
         }
     }
-    
+
     /**
      * This method will print a heading at the 
      * top of the stock list
@@ -170,7 +177,7 @@ public class StockManager
         System.out.println("======================\n");
         System.out.println();
     }
-    
+
     /**
      * 
      * 
@@ -179,7 +186,7 @@ public class StockManager
     public void removeProduct(int id)
     {
         Product product = findProduct(id);
-        
+
         if(product != null)
         {
             stock.remove(product);
@@ -191,8 +198,8 @@ public class StockManager
         }
 
     }
-    
-        /**
+
+    /**
      * 
      * 
      * 
@@ -200,7 +207,7 @@ public class StockManager
     public void renameProduct(int id, String newName)
     {
         Product product = findProduct(id);
-        
+
         if(product != null)
         {
             product.changeName(newName);
