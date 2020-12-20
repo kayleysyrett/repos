@@ -16,6 +16,8 @@ public class StockApp
 
     private StockManager manager;
     
+    private StockDemo demo;
+    
     private int nextID = FIRST_ID;
 
     /**
@@ -25,6 +27,7 @@ public class StockApp
     {
         input = new InputReader();
         manager = new StockManager();
+        demo = new StockDemo(manager);
     }
 
     /**
@@ -58,6 +61,10 @@ public class StockApp
         {
           addProduct();
         }
+        else if(choice.equals("remove"))
+        {
+          removeProduct();
+        }
         else if(choice.equals("printall"))
         {
           printAllProducts();
@@ -74,6 +81,22 @@ public class StockApp
         
         Product product = new Product(nextID, name);
         manager.addProduct(product);
+        
+        System.out.println("\nAdded " + product + " to the stock\n");
+        nextID++;
+    }
+    
+    public void removeProduct()
+    {
+        System.out.println("Remove an old Product");
+        System.out.println();
+        
+        System.out.println("Please enter the id of the product ");
+        String number = input.getInput();
+        
+        int id = Integer.parseInt(number);
+        
+        manager.removeProduct(id);
     }
 
     /**

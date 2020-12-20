@@ -152,7 +152,7 @@ public class StockManager
     public void printAllProducts()
     {
         printHeading();
-        
+
         if(stock.size() == 0)
         {
             System.out.println("Currently you have no stock!");
