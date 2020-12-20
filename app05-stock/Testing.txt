@@ -1,0 +1,12 @@
+Program.main();
+******************************
+ Stock Management Application 
+    App05: by Kayley Syrett
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+> 
