@@ -35,6 +35,9 @@ public class Menu
         return choice;
     }
     
+    /**
+     * 
+     */
     private static boolean checkIsValid(String [] choices, String choice)
     {
         for(String validChoice : choices)
@@ -46,6 +49,9 @@ public class Menu
         return false;
     }
 
+    /**
+     * 
+     */
     private static void printChoices(String [] choices)
     {
         System.out.println("  Enter the first word, your choices are: \n");

@@ -69,7 +69,7 @@ public class StockManager
         return null;
     }
 
-        /**
+    /**
      * Try to find a duplicate product in the stock with the given id.
      * @return the identified product, or null if there is none
      *         with a matching id.

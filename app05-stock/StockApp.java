@@ -22,7 +22,7 @@ public class StockApp
     private StockDemo demo;
 
     private int nextID = FIRST_ID;
-    
+
     private String [] menuChoices;
 
     /**
@@ -33,21 +33,24 @@ public class StockApp
         input = new InputReader();
         manager = new StockManager();
         demo = new StockDemo(manager);
-        
+
         setUpMenu();
     }
 
+    /**
+     * 
+     */
     private void setUpMenu()
     {
         menuChoices = new String []
         {
-           "Add a new product",
-           "Remove an old product",
-           "Print all products",
-           "Quit the program"
+            "Add a new product",
+            "Remove an old product",
+            "Print all products",
+            "Quit the program"
         };
     }
-   
+
     /**
      * 
      */
@@ -58,7 +61,7 @@ public class StockApp
         while(!finished)
         {
             printHeading();
-  
+
             String choice = Menu.getMenuChoice(menuChoices);
             executeMenuChoice(choice);
 
@@ -86,6 +89,9 @@ public class StockApp
         }
     }
 
+    /**
+     * 
+     */
     public void addProduct()
     {
         System.out.println("Add a new Product");
@@ -117,6 +123,9 @@ public class StockApp
         nextID++; 
     }
 
+    /**
+     * 
+     */
     public void removeProduct()
     {
         System.out.println("Remove an old Product");
@@ -143,6 +152,9 @@ public class StockApp
         System.out.println();        
     }
 
+    /**
+     * 
+     */
     public void printAllProducts()
     {
         manager.printAllProducts();
