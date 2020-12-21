@@ -10,14 +10,14 @@
 public class StockApp
 {
     // Use to get user input
-    public final int FIRST_ID = 200;
-    
+    public final int FIRST_ID = 101;
+
     private InputReader input;
 
     private StockManager manager;
-    
+
     private StockDemo demo;
-    
+
     private int nextID = FIRST_ID;
 
     /**
@@ -44,7 +44,7 @@ public class StockApp
 
             String choice = input.getInput();
             choice = choice.toLowerCase();
-            
+
             executeMenuChoice(choice);
 
             if(choice.equals("quit"))
@@ -59,43 +59,59 @@ public class StockApp
     {
         if(choice.equals("add"))
         {
-          addProduct();
+            addProduct();
         }
         else if(choice.equals("remove"))
         {
-          removeProduct();
+            removeProduct();
         }
         else if(choice.equals("printall"))
         {
-          printAllProducts();
+            printAllProducts();
         }
     }
-    
+
     public void addProduct()
     {
         System.out.println("Add a new Product");
         System.out.println();
-        
+
         System.out.println("Please enter the name of the product");
         String name = input.getInput();
-        
+
+        boolean isDuplicate = manager.isDuplicateID(nextID);
+        if(isDuplicate)
+        {
+            boolean finished = false;
+
+            while(!finished)
+            {
+                nextID++;
+                if(!manager.isDuplicateID(nextID))
+                {
+                    finished = true;
+                }
+            }
+
+        }
+
         Product product = new Product(nextID, name);
         manager.addProduct(product);
-        
+
         System.out.println("\nAdded " + product + " to the stock\n");
-        nextID++;
+        nextID++; 
     }
-    
+
     public void removeProduct()
     {
         System.out.println("Remove an old Product");
         System.out.println();
-        
+
         System.out.println("Please enter the id of the product ");
         String number = input.getInput();
-        
+
         int id = Integer.parseInt(number);
-        
+
         manager.removeProduct(id);
     }
 
@@ -111,7 +127,7 @@ public class StockApp
         System.out.println("    Quit:       Quit the program");
         System.out.println();        
     }
-    
+
     public void printAllProducts()
     {
         manager.printAllProducts();
