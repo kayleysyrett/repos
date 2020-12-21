@@ -25,8 +25,11 @@ public class Menu
             choice = reader.getInput();
             choice = choice.toLowerCase();
             
-            // To Do check that the choice is valid 
-
+            finished = checkIsValid(choices, choice);
+            if(!finished)
+            {
+                System.out.println(" Not a valid choice!");
+            }
         }
         
         return choice;
@@ -34,15 +37,22 @@ public class Menu
     
     private static boolean checkIsValid(String [] choices, String choice)
     {
+        for(String validChoice : choices)
+        {
+            validChoice = validChoice.toLowerCase();
+            if(validChoice.startsWith(choice))
+               return true;
+        }
         return false;
     }
 
     private static void printChoices(String [] choices)
     {
         System.out.println("  Enter the first word, your choices are: \n");
+        
         for(String choice: choices)
         {
-            System.out.println(choice);
+            System.out.println("   " + choice);
         }
     }
     
