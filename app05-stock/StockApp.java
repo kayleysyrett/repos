@@ -11,6 +11,9 @@ public class StockApp
 {
     // Use to get user input
     public final int FIRST_ID = 101;
+    public final String ADD = "add";
+    public final String REMOVE = "remove";
+    public final String PRINTALL = "printall";
 
     private InputReader input;
 
@@ -57,15 +60,15 @@ public class StockApp
      */
     public void executeMenuChoice(String choice)
     {
-        if(choice.equals("add"))
+        if(choice.equals(ADD))
         {
             addProduct();
         }
-        else if(choice.equals("remove"))
+        else if(choice.equals(REMOVE))
         {
             removeProduct();
         }
-        else if(choice.equals("printall"))
+        else if(choice.equals(PRINTALL))
         {
             printAllProducts();
         }
@@ -121,10 +124,10 @@ public class StockApp
     private void printMenuChoices()
     {
         System.out.println();
-        System.out.println("    Add:        Add a new product");
-        System.out.println("    Remove:     Remove an old product");
-        System.out.println("    PrintAll:   Print all products");
-        System.out.println("    Quit:       Quit the program");
+        System.out.println("    Add:         Add a new product");
+        System.out.println("    Remove:      Remove an old product");
+        System.out.println("    PrintAll:    Print all products");
+        System.out.println("    Quit:        Quit the program");
         System.out.println();        
     }
 
