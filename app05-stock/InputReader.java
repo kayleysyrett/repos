@@ -28,13 +28,49 @@ public class InputReader
      */
     public String getString(String prompt)
     {
-        System.out.print("> ");         // print prompt
-        String inputLine = reader.nextLine();
+        String inputLine = null;
+        boolean isValid = false;
+
+        while(!isValid)
+        {
+            System.out.print(prompt);         // print prompt
+            inputLine = reader.nextLine();
+
+            if(!inputLine.isEmpty())
+                isValid = true;
+            else 
+                System.out.println("Your entry is blank!");
+        }
 
         return inputLine;
     }
-    
+
+    /**
+     * Read a the next int from standard imput (the text terminal),
+     * and return it as an interger.
+     * 
+     * @return Integer typed by user.
+     */
+    public int getInt(String prompt)
+    {
+        int number = 0;
+        boolean isValid = false;
+
+        while(!isValid)
+        {
+            System.out.println(prompt);         
+            number = reader.nextInt();
+
+            if(number > 0)
+            {
+                isValid = true;
+            }
+            else 
+                System.out.println("Your value is less than zero!");
+        }
+
+        return number;
+    }
+}
 
     
-    
-}

@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class Menu here.
+ * This is a class menu.
  *
  * @author Kayley Syrett
  * @version 1, 21st December 
@@ -22,7 +22,7 @@ public class Menu
         {
             printChoices(choices);
 
-            choice = reader.getInput();
+            // choice = reader.getInput();
             choice = choice.toLowerCase();
             
             finished = checkIsValid(choices, choice);
